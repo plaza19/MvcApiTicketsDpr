@@ -1,0 +1,19 @@
+﻿@if (Context.User.Identity.IsAuthenticated == false)
+{
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Manage" asp-action="Login">Login</a>
+    </li>
+}
+else
+{
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="VerTickets">Ver Tickets</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="UploadTicket">Upload Ticket</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Manage" asp-action="LogOut">LogOut</a>
+    </li>
+
+}
